@@ -11,7 +11,7 @@ public interface SolicitudPaqueteRepository extends JpaRepository<SolicitudPaque
 
     Optional<SolicitudPaquete> findByNumeroSolicitud(String numeroSolicitud);
 
-    List<SolicitudPaquete> findByClienteIdPersonaOrderFechaRefistroDesc(Long idCliente);
+    List<SolicitudPaquete> findByClienteIdPersonaOrderByFechaRegistroDesc(Long idCliente);
 
     List<SolicitudPaquete> findByEstadoOrderByFechaRegistroDesc(EstadoSolicitud estado);
 }
